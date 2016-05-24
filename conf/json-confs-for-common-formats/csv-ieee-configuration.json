@@ -1,0 +1,15 @@
+{
+  "uuid": "c81cccc7-9e8f-73c8-9b8f-114c61749c9a",
+  "name": "csv-ieee-config",
+  "description": "config for csv ieee",
+  "parameters": {
+    "column_delimiter": "\\t",
+    "escape_character": "\\",
+    "quote_character": "\"",
+    "first_row_is_headings": true,
+    "column_names": "columnN",
+    "storage_type": "csv"
+  }
+}
+
+

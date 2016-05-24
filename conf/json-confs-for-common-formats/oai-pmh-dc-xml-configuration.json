@@ -1,0 +1,8 @@
+{
+    "name": "oai-pmh+dce configuration",
+    "description": "oai-pmh+dce configuration description",
+    "parameters": {
+        "storage_type": "oai-pmh+dce",
+        "record_tag": "record"
+    }
+}
