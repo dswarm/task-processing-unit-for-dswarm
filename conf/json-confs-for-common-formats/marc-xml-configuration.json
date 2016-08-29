@@ -1,0 +1,9 @@
+{
+    "name": "MARCXML (marcxml) configuration",
+    "description": "MARCXML (marcxml) configuration description",
+    "parameters": {
+        "storage_type": "marcxml",
+        "record_tag": "record"
+    }
+}
+

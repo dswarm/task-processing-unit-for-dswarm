@@ -1,0 +1,8 @@
+{
+    "name": "oai-pmh+marcxml configuration",
+    "description": "oai-pmh+marcxml configuration description",
+    "parameters": {
+        "storage_type": "oai-pmh+marcxml",
+        "record_tag": "record"
+    }
+}
