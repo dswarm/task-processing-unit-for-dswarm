@@ -15,12 +15,38 @@
  */
 package de.tu_dortmund.ub.data.util;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Optional;
+import java.util.Properties;
+import java.util.concurrent.Callable;
+import java.util.concurrent.Future;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+
 import de.tu_dortmund.ub.data.TPUException;
 import de.tu_dortmund.ub.data.dswarm.APIStatics;
 import de.tu_dortmund.ub.data.dswarm.DswarmBackendStatics;
 import de.tu_dortmund.ub.data.dswarm.Init;
 import de.tu_dortmund.ub.data.dswarm.TPUStatics;
-import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -34,16 +60,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
-import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.*;
-import java.util.concurrent.*;
 
 /**
  * @author tgaengler
@@ -144,7 +160,7 @@ public final class TPUUtil {
 
 		final Path filePath = Paths.get(fileName);
 		final char[] buffer = new char[MAX_BUFFER_LENGTH];
-		BufferedReader bufferedReader = Files.newBufferedReader(filePath, Charsets.UTF_8);
+		BufferedReader bufferedReader = Files.newBufferedReader(filePath, StandardCharsets.UTF_8);
 		final int readCharacters = bufferedReader.read(buffer, 0, MAX_BUFFER_LENGTH);
 
 		if (readCharacters <= -1) {

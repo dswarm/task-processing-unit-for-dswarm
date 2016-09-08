@@ -43,6 +43,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -55,7 +56,6 @@ import javax.json.JsonObject;
 import javax.json.stream.JsonGenerator;
 
 import de.tu_dortmund.ub.data.util.TPUUtil;
-import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -140,7 +140,7 @@ public class Init implements Callable<String> {
 			}
 
 			final String configurationFileName = config.getProperty(TPUStatics.CONFIGURATION_NAME_IDENTIFIER);
-			final String configurationJSONString = readFile(configurationFileName, Charsets.UTF_8);
+			final String configurationJSONString = readFile(configurationFileName, StandardCharsets.UTF_8);
 			final JsonObject configurationJSON = TPUUtil.getJsonObject(configurationJSONString);
 
 			final String finalInputResourceFile;
