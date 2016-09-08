@@ -53,7 +53,7 @@
 		<version.httpclient>4.5.1</version.httpclient>
 		<version.httpcore>4.4.4</version.httpcore>
 		<version.httpmime>4.5.1</version.httpmime>
-		<version.dswarm.common>0.0.3.1-SNAPSHOT</version.dswarm.common>
+		<version.dswarm.common>0.0.3.2-SNAPSHOT</version.dswarm.common>
 	</properties>
 
 	<prerequisites>
