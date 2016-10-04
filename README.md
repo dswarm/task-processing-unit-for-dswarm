@@ -32,6 +32,11 @@ The task processing unit can be configured for various scenarios, e.g.,
 * any combination of the previous scenarios ;)
 
 The fastest scenario is ```on-the-fly transform```, since it doesn't store anything in the data hub and does only the pure data processing. So it's recommend for data transformation scenarios, where only the output is important, but not the archiving of the data. Currently, this scenario supports following mime types for export: 
+* 'application/json' ([Simple JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#simple-json))
+* 'application/gdm+json' ([GDM JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-json))
+* 'application/gdm+compact+json' ([GDM Ordered JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-ordered-json))
+* 'application/gdm+simple+json' ([GDM Simple JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-simple-json))
+* 'application/gdm+simple+short+json' ([GDM Simple Short JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-simple-short-json))
 * 'application/xml', 
 * 'application/solr+update+xml' ([Solr Update Format](https://wiki.apache.org/solr/UpdateXmlMessages)), 
 * 'text/turtle' ([Turtle](https://www.w3.org/TR/turtle/)), 
