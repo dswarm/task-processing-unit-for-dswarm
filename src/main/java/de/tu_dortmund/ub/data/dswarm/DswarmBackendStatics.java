@@ -45,7 +45,6 @@ public final class DswarmBackendStatics {
 	public static final String PERSIST_IDENTIFIER                 = "persist";
 	public static final String DO_NOT_RETURN_DATA_IDENTIFIER      = "do_not_return_data";
 	public static final String DO_INGEST_ON_THE_FLY               = "do_ingest_on_the_fly";
-	public static final String DO_EXPORT_ON_THE_FLY               = "do_export_on_the_fly";
 	public static final String DO_VERSIONING_ON_RESULT_IDENTIFIER = "do_versioning_on_result";
 	public static final String UTILISE_EXISTING_INPUT_IDENTIFIER  = "utilise_existing_input_schema";
 	public static final String DO_DATA_MODEL_INGEST_IDENTIFIER    = "doIngest";
@@ -56,7 +55,7 @@ public final class DswarmBackendStatics {
 	public static final String STORAGE_TYPE_IDENTIFIER                   = "storage_type";
 	public static final String XML_STORAGE_TYPE                          = "xml";
 	public static final String MABXML_STORAGE_TYPE                       = "mabxml";
-	public static final String MARCXML_STORAGE_TYPE                      = "marc21";
+	public static final String MARCXML_STORAGE_TYPE                      = "marcxml";
 	public static final String PNX_STORAGE_TYPE                          = "pnx";
 	public static final String OAI_PMH_DC_ELEMENTS_STORAGE_TYPE          = "oai-pmh+dce";
 	public static final String OAI_PMH_DCE_AND_EDM_ELEMENTS_STORAGE_TYPE = "oai-pmh+dce+edm";
