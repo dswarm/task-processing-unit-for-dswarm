@@ -37,6 +37,7 @@ The fastest scenario is ```on-the-fly transform```, since it doesn't store anyth
 * 'application/gdm+compact+json' ([GDM Ordered JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-ordered-json))
 * 'application/gdm+simple+json' ([GDM Simple JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-simple-json))
 * 'application/gdm+simple+short+json' ([GDM Simple Short JSON](https://github.com/dswarm/dswarm-documentation/wiki/JSON-Flavours#gdm-simple-short-json))
+* 'application/jsc+json' (simple JSON that should conform an underlying JSON Schema)
 * 'application/xml', 
 * 'application/solr+update+xml' ([Solr Update Format](https://wiki.apache.org/solr/UpdateXmlMessages)), 
 * 'text/turtle' ([Turtle](https://www.w3.org/TR/turtle/)), 
