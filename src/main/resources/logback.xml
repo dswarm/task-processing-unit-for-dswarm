@@ -98,7 +98,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="de.tu_dortmund.ub.data">
+	<logger name="de.tu_dortmund.ub.data" level="INFO">
 		<appender-ref ref="FAT"/>
 		<appender-ref ref="FAD"/>
 		<appender-ref ref="FAI"/>
@@ -107,7 +107,7 @@
 		<appender-ref ref="FAF"/>
 	</logger>
 
-	<root level="DEBUG">
+	<root level="INFO">
 		<appender-ref ref="DEFAULT"/>
 		<appender-ref ref="STDOUT"/>
 	</root>
