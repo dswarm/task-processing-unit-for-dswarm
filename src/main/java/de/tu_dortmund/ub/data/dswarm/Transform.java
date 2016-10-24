@@ -58,6 +58,7 @@ import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
 import javax.json.JsonObject;
 import javax.json.stream.JsonGenerator;
+
 import java.io.StringWriter;
 import java.util.*;
 import java.util.concurrent.Callable;
@@ -183,9 +184,7 @@ public class Transform implements Callable<String> {
 
 		jp.writeStartObject();
 		jp.write(DswarmBackendStatics.PERSIST_IDENTIFIER, persist);
-		// default for now: true, i.e., no content will be returned
-		jp.write(DswarmBackendStatics.DO_NOT_RETURN_DATA_IDENTIFIER, true);
-		// default for now: true, i.e., if a schema is attached it will utilised (instead of being derived from the data resource)
+		// default for now: true, i.e., if a schema is attached it will be utilised (instead of being derived from the data resource)
 		jp.write(DswarmBackendStatics.UTILISE_EXISTING_INPUT_IDENTIFIER, true);
 
 		if (optionalDoIngestOnTheFly.isPresent()) {
@@ -200,17 +199,20 @@ public class Transform implements Callable<String> {
 			jp.write(DswarmBackendStatics.DO_INGEST_ON_THE_FLY, doIngestOnTheFly);
 		}
 
-		if (optionalDoExportOnTheFly.isPresent()) {
+		final boolean doNotReturnData;
 
-			final Boolean doExportOnTheFly = optionalDoExportOnTheFly.get();
+		if (optionalDoExportOnTheFly.isPresent() && optionalDoExportOnTheFly.get()) {
 
-			if (doExportOnTheFly) {
+			LOG.info(String.format("[%s][%d] do export on-the-fly", serviceName, cnt));
 
-				LOG.info(String.format("[%s][%d] do export on-the-fly", serviceName, cnt));
-			}
+			doNotReturnData = false;
+		} else {
 
-			jp.write(DswarmBackendStatics.DO_EXPORT_ON_THE_FLY, doExportOnTheFly);
+			// default for now: true, i.e., no content will be returned
+			doNotReturnData = true;
 		}
+
+		jp.write(DswarmBackendStatics.DO_NOT_RETURN_DATA_IDENTIFIER, doNotReturnData);
 
 		jp.write(DswarmBackendStatics.DO_VERSIONING_ON_RESULT_IDENTIFIER, false);
 
