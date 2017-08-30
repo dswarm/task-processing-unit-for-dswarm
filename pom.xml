@@ -1,12 +1,12 @@
 <!--
 
-    Copyright (C) 2015 – 2016 Dortmund University Library, SLUB Dresden & Avantgarde Labs GmbH (<code@dswarm.org>)
+    Copyright © 2015 – 2017 Dortmund University Library, SLUB Dresden & Avantgarde Labs GmbH (<code@dswarm.org>)
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-            http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,29 +31,29 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
-		<maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
-		<maven-resources-plugin.version>3.0.1</maven-resources-plugin.version>
+		<maven-compiler-plugin.version>3.6.2</maven-compiler-plugin.version>
+		<maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+		<maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
 		<maven-install-plugin.version>2.5.2</maven-install-plugin.version>
-		<maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
+		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
 		<maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
 		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
-		<maven-version-plugin.version>2.3</maven-version-plugin.version>
-		<maven-shade-plugin.version>2.4.3</maven-shade-plugin.version>
-		<version.maven.plugin.license>2.11</version.maven.plugin.license>
+		<maven-version-plugin.version>2.4</maven-version-plugin.version>
+		<maven-shade-plugin.version>3.1.0</maven-shade-plugin.version>
+		<version.maven.plugin.license>3.0</version.maven.plugin.license>
 		<junit.version>4.12</junit.version>
-		<version.slf4j.api>1.7.21</version.slf4j.api>
-		<version.logback>1.1.7</version.logback>
-		<javax-json.version>1.0.4</javax-json.version>
+		<version.slf4j.api>1.7.25</version.slf4j.api>
+		<version.logback>1.2.3</version.logback>
+		<javax-json.version>1.1</javax-json.version>
 		<httpcomponents.version>4.4</httpcomponents.version>
-		<google.guava.version>19.0</google.guava.version>
+		<google.guava.version>23.0</google.guava.version>
 		<version.xmlenhancer>0.0.2-SNAPSHOT</version.xmlenhancer>
-		<version.commons-lang3>3.4</version.commons-lang3>
+		<version.commons-lang3>3.6</version.commons-lang3>
 		<version.commons-io>2.5</version.commons-io>
-		<version.httpclient>4.5.1</version.httpclient>
-		<version.httpcore>4.4.4</version.httpcore>
-		<version.httpmime>4.5.1</version.httpmime>
-		<version.dswarm.common>0.0.3.3-SNAPSHOT</version.dswarm.common>
+		<version.httpclient>4.5.3</version.httpclient>
+		<version.httpcore>4.4.6</version.httpcore>
+		<version.httpmime>4.5.3</version.httpmime>
+		<version.dswarm.common>0.0.3.4-SNAPSHOT</version.dswarm.common>
 	</properties>
 
 	<prerequisites>
@@ -242,7 +242,7 @@
 					<header>com/mycila/maven/plugin/license/templates/APACHE-2.txt</header>
 					<properties>
 						<owner>Dortmund University Library, SLUB Dresden &amp; Avantgarde Labs GmbH</owner>
-						<project.inceptionYear>2015 &ndash; 2016</project.inceptionYear>
+						<project.inceptionYear>2015 &ndash; 2017</project.inceptionYear>
 						<email>&lt;code@dswarm.org&gt;</email>
 					</properties>
 					<useDefaultExcludes>true</useDefaultExcludes>
