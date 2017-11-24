@@ -45,7 +45,7 @@ The fastest scenario is ```on-the-fly transform```, since it doesn't store anyth
 * 'application/trig', 
 * 'application/trix', 
 * 'application/n-quads' ([N-Quads](https://www.w3.org/TR/n-quads/)), 
-* 'application/n-triples' ([N-Triples](http://afs.github.io/rdf-thrift/)) and 
+* 'application/n-triples' ([N-Triples](https://www.w3.org/TR/n-triples/)) and 
 * 'application/rdf+thrift' ([RDF Thrift](http://afs.github.io/rdf-thrift/)). 
 
 The ```on-the-fly transform``` scenario can easily be parallelized via splitting your input data resource into several parts. Then each part can be processed in parallel.
